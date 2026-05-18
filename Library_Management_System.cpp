@@ -6,14 +6,14 @@ using namespace std;
 class Book {
 public:
     int id;
-    string title, author;
+    char title[100], author[100];
     bool issued;   // false = available
 
     void create() {
         cout << "Book ID: "; cin >> id;
         cin.ignore();
-        cout << "Title: "; getline(cin, title);
-        cout << "Author: "; getline(cin, author);
+        cout << "Title: "; cin.getline(title,100);
+        cout << "Author: "; cin.getline(author,100);
         issued = false;
     }
 
